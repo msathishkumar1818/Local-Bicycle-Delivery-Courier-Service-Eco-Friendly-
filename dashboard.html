@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Client Dispatch Dashboard & Courier Tracking | EcoCycle Express</title>
+  <meta name="description"
+    content="EcoCycle Express Business Client Dashboard. Submit bicycle delivery pickup requests, monitor real-time courier GPS tracking, and manage monthly ESG billing.">
+  <meta name="keywords"
+    content="bicycle delivery dashboard, courier tracking, dispatch booking portal, eco courier billing">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+
+  <!-- Stylesheets (Zero inline styles) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="dashboard-page-body">
+
+  <!-- ========================================================================
+       1. BRANDED PRELOADER
+       ======================================================================== -->
+  <div id="preloader" role="status" aria-live="polite" aria-label="Loading page">
+    <div class="preloader-spinner-wrap">
+      <img src="assets/images/logo/logo.png" alt="EcoCycle Express Logo" class="preloader-logo-img" width="56"
+        height="56">
+      <div class="preloader-ring"></div>
+    </div>
+    <span class="preloader-text">Loading Dispatch Dashboard...</span>
+  </div>
+
+  <!-- ========================================================================
+       2. STICKY TOP NAVIGATION BAR (HEADER MENU BUTTON REMOVED AS REQUESTED)
+       ======================================================================== -->
+  <header class="dash-topbar" id="dash-topbar">
+    <div class="dash-topbar-left">
+      <!-- Brand Logo + Portal Name -->
+      <a href="index.html" class="dash-brand-link" aria-label="EcoCycle Express Home">
+        <img src="assets/images/logo/logo.png" alt="EcoCycle Express Logo" class="dash-brand-logo" width="40"
+          height="40">
+        <div class="dash-brand-text">
+          <span class="dash-brand-title">EcoCycle Express</span>
+          <span class="dash-brand-sub">Courier &amp; Dispatch Portal</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="dash-topbar-right">
+      <!-- Live Status Badge (Active Couriers) -->
+      <div class="dash-status-badge">
+        <span class="dash-status-dot"></span>
+        <span>Fleet Active &bull; 42 Couriers on Duty</span>
+      </div>
+
+      <!-- RTL Direction Toggle -->
+      <button type="button" class="dash-action-btn rtl-toggle-btn" aria-label="Switch text direction">
+        <span>RTL</span>
+      </button>
+
+      <!-- Dark / Light Theme Toggle -->
+      <button type="button" class="dash-action-btn theme-toggle-btn" aria-label="Switch color theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <!-- Profile Avatar & Details Dropdown Menu (Marked Top-Right Location) -->
+      <div class="dash-profile-dropdown-wrapper">
+        <button type="button" class="dash-profile-btn" id="dashProfileBtn" aria-haspopup="true" aria-expanded="false" aria-label="Open user profile menu">
+          <span class="dash-profile-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dash-profile-icon" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="dash-profile-badge-dot" aria-hidden="true"></span>
+          </span>
+        </button>
+
+        <!-- Profile Dropdown Popup -->
+        <div class="dash-profile-menu" id="dashProfileMenu" role="menu" aria-labelledby="dashProfileBtn">
+          <!-- Profile Header Meta -->
+          <div class="dash-profile-menu-header">
+            <div class="dash-profile-user-info">
+              <div class="dash-profile-large-avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="dash-profile-user-meta">
+                <span class="dash-profile-name">Elena Vance</span>
+                <span class="dash-profile-email">elena@vancebiotech.com</span>
+              </div>
+            </div>
+            <div class="dash-profile-tier-badge">
+              <span class="tier-dot"></span>
+              <span>Enterprise Priority Client</span>
+            </div>
+          </div>
+
+          <!-- Account Meta Card -->
+          <div class="dash-profile-account-card">
+            <div class="profile-account-row">
+              <span class="profile-account-label">Client Org</span>
+              <span class="profile-account-val">Vance BioTech Diagnostics</span>
+            </div>
+            <div class="profile-account-row">
+              <span class="profile-account-label">Account ID</span>
+              <span class="profile-account-val">#EC-2026-4092</span>
+            </div>
+            <div class="profile-account-row">
+              <span class="profile-account-label">Carbon Offset</span>
+              <span class="profile-account-val accent-val">342 kg Scope 3</span>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Links -->
+          <div class="dash-profile-menu-items">
+            <a href="#booking-section" class="dash-profile-menu-link" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>Book Priority Courier</span>
+            </a>
+            <a href="#tracking-section" class="dash-profile-menu-link" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              <span>Live Courier Tracking</span>
+            </a>
+            <a href="#billing-section" class="dash-profile-menu-link" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+              <span>Billing &amp; Tax Ledgers</span>
+            </a>
+            <a href="index.html" class="dash-profile-menu-link" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Public Website</span>
+            </a>
+          </div>
+
+          <div class="dash-profile-menu-divider"></div>
+
+          <!-- Sign Out / Logout Action -->
+          <div class="dash-profile-menu-footer">
+            <a href="login.html" class="dash-profile-logout-btn" role="menuitem" aria-label="Log out of business portal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+              </svg>
+              <span>Sign Out / Log Out</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       3. MOBILE HORIZONTAL NAVIGATION STRIP (RESPONSIVE NO-MENU SOLUTION)
+       ======================================================================== -->
+  <nav class="dash-mobile-nav-bar" aria-label="Mobile Dashboard Navigation">
+    <a href="#overview-section" class="dash-mobile-tab-pill active">Overview</a>
+    <a href="#booking-section" class="dash-mobile-tab-pill">Book Pickup</a>
+    <a href="#tracking-section" class="dash-mobile-tab-pill">Live Tracking (4)</a>
+    <a href="#billing-section" class="dash-mobile-tab-pill">Billing &amp; ESG</a>
+    <a href="index.html" class="dash-mobile-tab-pill">Public Website</a>
+    <a href="login.html" class="dash-mobile-tab-pill dash-mobile-logout-pill" aria-label="Log out of business portal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+        <polyline points="16 17 21 12 16 7"></polyline>
+        <line x1="21" y1="12" x2="9" y2="12"></line>
+      </svg>
+      <span>Log Out</span>
+    </a>
+  </nav>
+
+  <!-- ========================================================================
+       4. MAIN APP GRID LAYOUT (STICKY SIDEBAR + CONTENT SHELL)
+       ======================================================================== -->
+  <div class="dash-layout-container">
+
+    <!-- Left Sticky Sidebar (Does not scroll off the top) -->
+    <aside class="dash-sidebar" id="dash-sidebar" aria-label="Client Navigation Sidebar">
+
+      <div class="dash-nav-group">
+        <!-- 1. Overview -->
+        <a href="#overview-section" class="dash-nav-item active">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Overview</span>
+          </div>
+        </a>
+
+        <!-- 2. Book Delivery Pickup -->
+        <a href="#booking-section" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>Book Pickup</span>
+          </div>
+        </a>
+
+        <!-- 3. Live Courier Tracking -->
+        <a href="#tracking-section" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+            <span>Courier Tracking</span>
+          </div>
+          <span class="dash-badge">4 active</span>
+        </a>
+
+        <!-- 4. Carbon Offsets & ESG -->
+        <a href="#billing-section" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Carbon Ledger</span>
+          </div>
+          <span class="dash-badge">342 kg</span>
+        </a>
+
+        <!-- 5. Invoicing & Billing -->
+        <a href="#billing-section" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+            <span>Billing &amp; Invoices</span>
+          </div>
+        </a>
+
+        <!-- 6. Public Website -->
+        <a href="index.html" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Public Website</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Bottom Area: Member Status Card + Sidebar Logout Button -->
+      <div class="dash-sidebar-bottom">
+        <div class="dash-sidebar-bottom-card">
+          <div class="dash-facility-label">CLIENT ACCOUNT</div>
+          <div class="dash-facility-name">Vance BioTech Diagnostics</div>
+          <div class="dash-facility-status">
+            <span class="dash-facility-dot"></span>
+            <span>Enterprise Priority Fleet</span>
+          </div>
+        </div>
+
+        <a href="login.html" class="dash-sidebar-logout-btn" aria-label="Log out of business portal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Log Out</span>
+        </a>
+      </div>
+
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main-content">
+
+      <!-- =====================================================================
+           1. Hello Greeting Banner (Matching Reference Model)
+           ===================================================================== -->
+      <section class="dash-banner" id="overview-section" aria-label="Welcome Banner">
+        <div class="dash-banner-content">
+          <h1 class="dash-banner-title">Hello, Vance BioTech</h1>
+          <p class="dash-banner-meta">
+            <span class="dash-banner-meta-item">Enterprise Corporate Tier</span>
+            <span class="dash-banner-bullet" aria-hidden="true">&bull;</span>
+
+
+
+          </p>
+        </div>
+        <a href="#booking-section" class="dash-banner-cta" aria-label="Book new delivery pickup">
+          <span>+ Book New Pickup</span>
+        </a>
+      </section>
+
+      <!-- =====================================================================
+           2. Overview Section Header & 4 Even KPI Metric Cards
+           ===================================================================== -->
+      <section aria-labelledby="overview-heading">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title" id="overview-heading">Overview</h2>
+          <p class="dash-section-sub">Real-time status of your active deliveries, completed drops, and carbon savings.
+          </p>
+        </div>
+
+        <div class="dash-kpi-grid">
+          <!-- Metric 1: Active Deliveries (Blue) -->
+          <div class="dash-kpi-card">
+            <span class="dash-kpi-label">ACTIVE DELIVERIES</span>
+            <span class="dash-kpi-number">4</span>
+            <span class="dash-kpi-subtext">2 Rush Sprint &bull; 2 Heavy Cargo</span>
+          </div>
+
+          <!-- Metric 2: Completed Drops (Amber) -->
+          <div class="dash-kpi-card">
+            <span class="dash-kpi-label">COMPLETED DROPS</span>
+            <span class="dash-kpi-number">148</span>
+            <span class="dash-kpi-subtext">Dispatched this billing cycle</span>
+          </div>
+
+          <!-- Metric 3: Carbon Savings (Green) -->
+          <div class="dash-kpi-card">
+            <span class="dash-kpi-label">CO2 EMISSIONS SAVED</span>
+            <span class="dash-kpi-number">342 kg</span>
+            <span class="dash-kpi-subtext">100% Zero-emission transit</span>
+          </div>
+
+          <!-- Metric 4: Monthly Invoicing (Purple) -->
+          <div class="dash-kpi-card">
+            <span class="dash-kpi-label">MONTHLY INVOICE</span>
+            <span class="dash-kpi-number">$490</span>
+            <span class="dash-kpi-subtext">Corporate Plan &bull; Renews Nov 01</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           3. Operational Split Grid: Live Tracking & Booking Request Form
+           ===================================================================== -->
+      <section class="dash-split-grid" aria-label="Operations Grid">
+
+        <!-- Left Column: Active Courier Dispatches (Tracking Status) -->
+        <div class="dash-card" id="tracking-section">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Active Courier Dispatches</h3>
+            <a href="#tracking-section" class="dash-card-link">Live Telemetry Map &rarr;</a>
+          </div>
+
+          <div class="dash-order-list">
+
+            <!-- Order 1: Rush Contract -->
+            <div class="dash-order-item">
+              <div class="dash-order-info">
+                <div class="dash-order-meta">
+                  <span>DISPATCH #EC-8814</span>
+                  <span class="dash-order-tag">In Transit</span>
+                </div>
+                <h4 class="dash-order-name">Rush Legal Contract &bull; Room 402</h4>
+                <p class="dash-order-sub">Courier: Liam O'Connor (Bike #12) &bull; ETA 14 mins</p>
+              </div>
+              <a href="#" class="dash-order-action-btn">Track GPS</a>
+            </div>
+
+            <!-- Order 2: Cold-Chain Specimen -->
+            <div class="dash-order-item">
+              <div class="dash-order-info">
+                <div class="dash-order-meta">
+                  <span>DISPATCH #EC-8819</span>
+                  <span class="dash-order-tag">In Transit</span>
+                </div>
+                <h4 class="dash-order-name">Cold-Chain Bio Specimen &bull; 4&deg;C Verified</h4>
+                <p class="dash-order-sub">Courier: Maya Lin (Cold Box #04) &bull; ETA 21 mins</p>
+              </div>
+              <a href="#" class="dash-order-action-btn">Track GPS</a>
+            </div>
+
+            <!-- Order 3: Artisan Food -->
+            <div class="dash-order-item">
+              <div class="dash-order-info">
+                <div class="dash-order-meta">
+                  <span>DISPATCH #EC-8823</span>
+                  <span class="dash-order-tag">Out for Delivery</span>
+                </div>
+                <h4 class="dash-order-name">Executive Catering &bull; Grand Plaza</h4>
+                <p class="dash-order-sub">Courier: Tariq Chen (Trike #07) &bull; Level Suspension</p>
+              </div>
+              <a href="#" class="dash-order-action-btn">View Route</a>
+            </div>
+
+            <!-- Order 4: Completed -->
+            <div class="dash-order-item">
+              <div class="dash-order-info">
+                <div class="dash-order-meta">
+                  <span>DISPATCH #EC-8809</span>
+                  <span class="dash-order-tag">Delivered</span>
+                </div>
+                <h4 class="dash-order-name">Architectural Mockup &bull; Studio Z</h4>
+                <p class="dash-order-sub">Signed by Clerk R. Miller &bull; Digital Stamp Uploaded</p>
+              </div>
+              <a href="#" class="dash-order-action-btn">View Proof</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Submit Delivery Pickup Request Form -->
+        <div class="dash-card" id="booking-section">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Submit Pickup Request</h3>
+            <span class="dash-badge">Instant Courier Dispatch</span>
+          </div>
+
+          <form action="#" method="get" class="dash-form">
+            <div class="dash-form-group">
+              <label for="pickup-address" class="dash-form-label">Pickup Address</label>
+              <input type="text" id="pickup-address" class="dash-form-input" value="742 Evergreen Metro Hub, District 4"
+                required>
+            </div>
+
+            <div class="dash-form-group">
+              <label for="dropoff-address" class="dash-form-label">Destination Address</label>
+              <input type="text" id="dropoff-address" class="dash-form-input"
+                placeholder="e.g. 450 High Street, Suite 300" required>
+            </div>
+
+            <div class="dash-form-row">
+              <div class="dash-form-group">
+                <label for="service-tier" class="dash-form-label">Dispatch Service Tier</label>
+                <select id="service-tier" class="dash-form-select">
+                  <option value="rush">Rush Sprint (&lt; 45m)</option>
+                  <option value="cold-chain">Cold-Chain Specimen</option>
+                  <option value="catering">Artisan Catering</option>
+                  <option value="cargo">Heavy E-Cargo Freight</option>
+                </select>
+              </div>
+
+              <div class="dash-form-group">
+                <label for="package-weight" class="dash-form-label">Estimated Weight</label>
+                <select id="package-weight" class="dash-form-select">
+                  <option value="light">Under 5 kg (Pouch/Tube)</option>
+                  <option value="medium">5 kg - 15 kg (Pannier)</option>
+                  <option value="heavy">Over 15 kg (Cargo Trike)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="dash-form-group">
+              <label for="special-instructions" class="dash-form-label">Special Handover Notes</label>
+              <input type="text" id="special-instructions" class="dash-form-input"
+                placeholder="e.g. Leave with 4th floor receptionist, call upon arrival">
+            </div>
+
+            <button type="submit" class="dash-form-submit-btn">
+              <span>Confirm &amp; Dispatch Courier &bull; $14.50</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"
+                aria-hidden="true">
+                <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- =====================================================================
+           4. Billing & Monthly Invoicing Ledger Table
+           ===================================================================== -->
+      <section class="dash-card" id="billing-section" aria-labelledby="billing-heading">
+        <div class="dash-card-header">
+          <div>
+            <h3 class="dash-card-title" id="billing-heading">Monthly Invoicing &amp; Carbon Ledger</h3>
+            <p class="dash-section-sub">Download tax receipts and audited Scope 3 ESG carbon certificates.</p>
+          </div>
+          <a href="#" class="dash-card-link">Download Full Statement &rarr;</a>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Invoice ID</th>
+                <th>Billing Period</th>
+                <th>Total Drops</th>
+                <th>CO2 Offset</th>
+                <th>Total Amount</th>
+                <th>Payment Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#INV-2026-10</strong></td>
+                <td>Oct 01 - Oct 31, 2026</td>
+                <td>148 Deliveries</td>
+                <td>342 kg CO2 saved</td>
+                <td>$490.00</td>
+                <td><span class="dash-table-status-paid">Paid &bull; Auto</span></td>
+                <td><a href="#" class="dash-order-action-btn">Download PDF</a></td>
+              </tr>
+              <tr>
+                <td><strong>#INV-2026-09</strong></td>
+                <td>Sep 01 - Sep 30, 2026</td>
+                <td>162 Deliveries</td>
+                <td>388 kg CO2 saved</td>
+                <td>$524.50</td>
+                <td><span class="dash-table-status-paid">Paid &bull; Card</span></td>
+                <td><a href="#" class="dash-order-action-btn">Download PDF</a></td>
+              </tr>
+              <tr>
+                <td><strong>#INV-2026-08</strong></td>
+                <td>Aug 01 - Aug 31, 2026</td>
+                <td>134 Deliveries</td>
+                <td>319 kg CO2 saved</td>
+                <td>$490.00</td>
+                <td><span class="dash-table-status-paid">Paid &bull; Card</span></td>
+                <td><a href="#" class="dash-order-action-btn">Download PDF</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- External JavaScript (Zero inline scripts) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

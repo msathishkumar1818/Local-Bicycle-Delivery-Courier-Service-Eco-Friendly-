@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transparent Delivery Pricing & Commercial Subscriptions | EcoCycle Express</title>
+  <meta name="description"
+    content="Predictable, zero-surge bicycle courier pricing. Estimate instant delivery rates, explore transparent commercial plans, and unlock enterprise micro-hub subscriptions.">
+  <meta name="keywords"
+    content="bicycle delivery pricing, courier rates, zero surge delivery, commercial courier plans, cargo bike rates, eco courier cost">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+
+  <!-- Stylesheets (Zero inline styles) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       1. BRANDED PRELOADER
+       ======================================================================== -->
+  <div id="preloader" role="status" aria-live="polite" aria-label="Loading page">
+    <div class="preloader-spinner-wrap">
+      <img src="assets/images/logo/logo.png" alt="EcoCycle Express Logo" class="preloader-logo-img" width="56"
+        height="56">
+      <div class="preloader-ring"></div>
+    </div>
+    <span class="preloader-text">Loading Rates...</span>
+  </div>
+
+  <!-- ========================================================================
+       2. PRIMARY SITE HEADER (UNIFORM CONTAINER, 6 ITEMS, ACTIONS)
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Brand Logo + Identity -->
+      <a href="index.html" class="brand-identity" aria-label="EcoCycle Express Home">
+        <img src="assets/images/logo/logo.png" alt="EcoCycle Express Emblem" class="brand-logo-img">
+        <div class="brand-text-block">
+          <span class="brand-title">Eco<span>Cycle</span></span>
+          <span class="brand-subtitle">Express Courier</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Primary Items -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <!-- 1. Home (Click-only Dropdown) -->
+        <div class="nav-dropdown-wrapper">
+          <button type="button" class="dropdown-trigger" id="homeDropdownBtn" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="dropdown-menu" id="homeDropdownMenu" role="menu" aria-labelledby="homeDropdownBtn">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1 - Urban Zero-Emission</span>
+              <span class="dropdown-tag">Express</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2 - Cargo & Logistics</span>
+              <span class="dropdown-tag">Enterprise</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. About -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 3. Services -->
+        <a href="services.html" class="nav-link">Services</a>
+
+        <!-- 4. Pricing (Current Page) -->
+        <a href="pricing.html" class="nav-link active" aria-current="page">Pricing</a>
+
+        <!-- 5. Dashboard -->
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+
+        <!-- 6. Contact -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls: RTL + Dark Mode + Login + Book Pickup CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="control-btn control-btn-rtl rtl-toggle-btn" aria-label="Toggle layout direction">
+          RTL
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="control-btn theme-toggle-btn" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <!-- Login Portal Link -->
+        <a href="login.html" class="btn-login" aria-label="Business Client Login Portal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5"
+            aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Header Primary CTA Button -->
+        <a href="dashboard.html" class="btn-header-cta" aria-label="Book Delivery Pickup">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="w-3.5 h-3.5"
+            aria-hidden="true">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+          <span>Book Pickup</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" aria-label="Open mobile menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       3. MOBILE MENU DRAWER (CLEAN, ACCESSIBLE, INTEGRATED)
+       ======================================================================== -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop">
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+
+      <!-- Drawer Header with Brand + Close -->
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-identity">
+          <img src="assets/images/logo/logo.png" alt="EcoCycle" class="brand-logo-img">
+          <div class="brand-text-block">
+            <span class="brand-title">Eco<span>Cycle</span></span>
+            <span class="brand-subtitle">Express Courier</span>
+          </div>
+        </a>
+        <button type="button" class="mobile-close-btn" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" class="w-5 h-5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Controls Row: RTL & Dark Mode inside drawer -->
+      <div class="mobile-controls-row">
+        <span class="mobile-controls-label">Preferences</span>
+        <div class="mobile-controls-btns">
+          <button type="button" class="control-btn control-btn-rtl rtl-toggle-btn" aria-label="Toggle layout direction">
+            RTL
+          </button>
+          <button type="button" class="control-btn theme-toggle-btn" aria-label="Toggle dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation List -->
+      <nav class="mobile-nav-list" aria-label="Mobile Directory">
+
+        <!-- Accordion for Home 1 and Home 2 (Click Only) -->
+        <div class="mobile-accordion-wrap">
+          <button type="button" class="mobile-accordion-trigger" aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-chevron mobile-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="index.html" class="mobile-sub-link">
+              <span>Home 1 - Urban Zero-Emission</span>
+            </a>
+            <a href="home-2.html" class="mobile-sub-link">
+              <span>Home 2 - Cargo & Enterprise</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="pricing.html" class="mobile-nav-link active">Pricing</a>
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+
+      <!-- Mobile Drawer Footer CTAs -->
+      <div class="mobile-drawer-footer">
+        <a href="dashboard.html" class="mobile-btn-cta" aria-label="Book Instant Pickup">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="w-4 h-4"
+            aria-hidden="true">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+          <span>Book Instant Pickup</span>
+        </a>
+        <a href="login.html" class="mobile-btn-login" aria-label="Client Login Portal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="w-4 h-4"
+            aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span>Client Login Portal</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ======================================================================
+         SECTION 1: PRICING HERO & INTERACTIVE LIVE ESTIMATOR
+         ====================================================================== -->
+    <section class="pricing-hero-section" id="pricing-hero">
+      <div class="pricing-hero-container">
+
+        <div class="pricing-hero-content">
+          <div class="section-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+            <span>TRANSPARENT URBAN LOGISTICS</span>
+          </div>
+
+          <h1 class="pricing-hero-title">
+            Predictable Rates. Zero Surge Fees.
+          </h1>
+
+          <p class="pricing-hero-desc">
+            No congestion fees, no bad-weather surcharges, and no surprise mileage spikes. Straightforward per-delivery
+            and high-volume corporate rates backed by verified clean carbon offsets.
+          </p>
+
+          <div class="cta-button-row">
+            <a href="#rate-estimator" class="btn btn-primary btn-cta-primary">
+              <span>Calculate Instant Rate</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"
+                aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#pricing-plans" class="btn btn-secondary">
+              <span>View Commercial Plans</span>
+            </a>
+          </div>
+
+          <div class="cta-guarantees">
+            <span class="cta-guarantee-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"
+                aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>100% Flat Mileage Base</span>
+            </span>
+            <span class="cta-guarantee-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"
+                aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>$5,000 Transit Insurance</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 1B: INTERACTIVE LIVE DELIVERY RATE ESTIMATOR
+         ====================================================================== -->
+    <section class="pricing-calculator-section" id="rate-estimator">
+      <div class="pricing-calc-container">
+
+        <!-- Centered Section Heading -->
+        <div class="section-head-center">
+          <div class="section-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+              <line x1="8" y1="6" x2="16" y2="6"></line>
+              <line x1="16" y1="14" x2="16" y2="18"></line>
+              <path d="M16 10h.01"></path>
+              <path d="M12 10h.01"></path>
+              <path d="M8 10h.01"></path>
+              <path d="M12 14h.01"></path>
+              <path d="M8 14h.01"></path>
+              <path d="M12 18h.01"></path>
+              <path d="M8 18h.01"></path>
+            </svg>
+            <span>TRANSPARENT PRICING TOOL</span>
+          </div>
+          <h2 class="section-title">Instant Delivery Rate Estimator</h2>
+          <p class="section-subtitle">
+            Calculate accurate point-to-point courier dispatch costs with zero hidden surge fees.
+          </p>
+        </div>
+
+        <!-- Interactive Delivery Rate Estimator Card -->
+        <div class="pricing-calc-card">
+          <div class="pricing-calc-header">
+            <h3 class="pricing-calc-title">Live Fare Calculator</h3>
+            <span class="pricing-calc-badge">Live Calculator</span>
+          </div>
+
+          <!-- Distance Slider -->
+          <div class="pricing-calc-field">
+            <label for="pricingDistanceSlider" class="pricing-calc-label">
+              <span>Transit Distance</span>
+              <span class="pricing-calc-val-preview" id="pricingDistanceVal">5 Miles (8 km)</span>
+            </label>
+            <input type="range" min="1" max="20" value="5" step="1" class="pricing-slider" id="pricingDistanceSlider"
+              aria-label="Delivery distance in miles">
+          </div>
+
+          <!-- Urgency Tiers -->
+          <div class="pricing-calc-field">
+            <span class="pricing-calc-label">Select Urgency Tier</span>
+            <div class="pricing-tier-pills" role="radiogroup" aria-label="Dispatch Speed Tier">
+              <button type="button" class="pricing-tier-pill" data-tier="standard" role="radio" aria-checked="false">
+                Standard (90m)
+              </button>
+              <button type="button" class="pricing-tier-pill active" data-tier="rush" role="radio" aria-checked="true">
+                Rush Sprint (45m)
+              </button>
+              <button type="button" class="pricing-tier-pill" data-tier="cargo" role="radio" aria-checked="false">
+                Heavy E-Cargo
+              </button>
+            </div>
+          </div>
+
+          <!-- Live Output Box -->
+          <div class="pricing-calc-result-box">
+            <div>
+              <span class="pricing-calc-result-unit">Estimated Fixed Rate</span>
+              <div class="pricing-calc-result-price" id="pricingResultPrice">$20.50</div>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary">
+              <span>Dispatch Now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: 3-TIER COMMERCIAL RATE PLANS (BALANCED 3-COL GRID)
+         ====================================================================== -->
+    <section class="pricing-plans-section" id="pricing-plans">
+      <div class="pricing-plans-container">
+
+        <div class="section-head-center">
+          <div class="section-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+            <span>COMMERCIAL SUBSCRIPTIONS</span>
+          </div>
+          <h2 class="section-title">Transparent Tiered Plans</h2>
+          <p class="section-subtitle">
+            Engineered for boutique firms, growing medical practices, and enterprise retailers seeking zero-emission
+            courier priority.
+          </p>
+        </div>
+
+        <div class="pricing-plans-grid">
+
+          <!-- Plan 1: On-Demand Starter -->
+          <article class="pricing-plan-card">
+            <div class="pricing-plan-img-wrap">
+              <img src="assets/images/pricing/p22.jpg" alt="Agile bicycle courier ready for on-demand dispatch"
+                loading="lazy" width="400" height="180">
+            </div>
+            <div class="pricing-plan-body">
+              <div class="pricing-plan-top">
+                <span class="pricing-plan-badge">Pay As You Go</span>
+                <h3 class="pricing-plan-title">On-Demand Starter</h3>
+                <p class="pricing-plan-desc">
+                  Ideal for law offices, design studios, and occasional rush documents requiring sub-45 minute dispatch.
+                </p>
+                <div class="pricing-plan-price-row">
+                  <span class="pricing-plan-price">$8.50</span>
+                  <span class="pricing-plan-period">/ base + $1.20/mi</span>
+                </div>
+                <ul class="pricing-plan-features">
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Instant Booking via Web Portal</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Up to 12 kg Messenger Payload</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Real-Time GPS Tracking Link</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Standard Proof of Delivery Photo</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="dashboard.html" class="btn btn-secondary w-full">
+                <span>Start Free Account</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 2: Commercial Growth (Featured) -->
+          <article class="pricing-plan-card featured">
+            <span class="pricing-popular-badge">Most Popular</span>
+            <div class="pricing-plan-img-wrap">
+              <img src="assets/images/pricing/p23.jpg" alt="High speed electric cargo courier navigating city center"
+                loading="lazy" width="400" height="180">
+            </div>
+            <div class="pricing-plan-body">
+              <div class="pricing-plan-top">
+                <span class="pricing-plan-badge">High Frequency</span>
+                <h3 class="pricing-plan-title">Commercial Growth</h3>
+                <p class="pricing-plan-desc">
+                  Tailored for catering businesses, medical clinics, and daily e-commerce dispatches with volume
+                  discounts.
+                </p>
+                <div class="pricing-plan-price-row">
+                  <span class="pricing-plan-price">$490</span>
+                  <span class="pricing-plan-period">/ month (50 Drops Included)</span>
+                </div>
+                <ul class="pricing-plan-features">
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Priority Dispatch Queueing</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Cold-Chain & Cargo Bag Access</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Full RESTful Dispatch API</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Monthly Consolidated Invoicing</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Quarterly Certified ESG Ledger</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="login.html" class="btn btn-primary w-full">
+                <span>Subscribe Growth Plan</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 3: Enterprise Dedicated Fleet -->
+          <article class="pricing-plan-card">
+            <div class="pricing-plan-img-wrap">
+              <img src="assets/images/pricing/p24.jpg" alt="Commercial cargo fleet parked at logistics hub"
+                loading="lazy" width="400" height="180">
+            </div>
+            <div class="pricing-plan-body">
+              <div class="pricing-plan-top">
+                <span class="pricing-plan-badge">Full Hub Outsourcing</span>
+                <h3 class="pricing-plan-title">Dedicated Fleet</h3>
+                <p class="pricing-plan-desc">
+                  Exclusive riders, branded cargo panniers, and custom distribution routes for major retail networks.
+                </p>
+                <div class="pricing-plan-price-row">
+                  <span class="pricing-plan-price">$1,850</span>
+                  <span class="pricing-plan-period">/ month / dedicated rider</span>
+                </div>
+                <ul class="pricing-plan-features">
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Dedicated Full-Day Bicycle Courier</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Heavy 250 kg E-Cargo Trike Access</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Custom Co-Branded Uniforms</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Dedicated Dispatch Manager</span>
+                  </li>
+                  <li class="pricing-plan-feature-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Custom Webhook Integrations</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="contact.html" class="btn btn-secondary w-full">
+                <span>Contact Enterprise Sales</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: ENTERPRISE DEDICATED HUB SUBSCRIPTION
+         ====================================================================== -->
+    <section class="pricing-hub-section" id="enterprise-fleet">
+      <div class="pricing-hub-container">
+
+        <!-- Simple Centered Header -->
+        <div class="section-head-center">
+          <div class="section-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+              </path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+            <span>MICRO-HUB LOGISTICS</span>
+          </div>
+          <h2 class="section-title">Custom High-Volume Fulfillment</h2>
+          <p class="section-subtitle">
+            Consolidated downtown cargo bike relay hubs lowering fulfillment costs by 32% with zero urban emissions.
+          </p>
+        </div>
+
+        <!-- Clean Micro-Hub Image Display -->
+        <div class="pricing-hub-media">
+          <img src="assets/images/sections/pipeline-micro-hub.jpg"
+            alt="Urban cargo bicycle micro-hub cross-dock distribution operations" loading="lazy" width="1240"
+            height="520">
+        </div>
+
+        <!-- Enterprise 4-Feature Cards Row -->
+        <div class="pricing-hub-cards">
+
+          <div class="pricing-hub-card">
+            <div class="pricing-hub-card-header">
+              <div class="pricing-hub-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <span class="pricing-hub-card-tag">Dynamic Clustering</span>
+            </div>
+            <h3 class="pricing-hub-card-title">Route Optimization</h3>
+            <p class="pricing-hub-card-desc">AI algorithmic clustering batches urban parcel drops to cut transit times and fuel consumption.</p>
+          </div>
+
+          <div class="pricing-hub-card">
+            <div class="pricing-hub-card-header">
+              <div class="pricing-hub-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="pricing-hub-card-tag">Direct POS & ERP Sync</span>
+            </div>
+            <h3 class="pricing-hub-card-title">API Webhooks</h3>
+            <p class="pricing-hub-card-desc">Real-time webhook notifications and direct REST APIs for seamless Shopify, WooCommerce, and ERP integrations.</p>
+          </div>
+
+          <div class="pricing-hub-card">
+            <div class="pricing-hub-card-header">
+              <div class="pricing-hub-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="pricing-hub-card-tag">100% Refund Credit</span>
+            </div>
+            <h3 class="pricing-hub-card-title">Guaranteed SLA</h3>
+            <p class="pricing-hub-card-desc">Sub-30-minute rapid downtown deliveries backed by automated instant SLA credits on any late arrival.</p>
+          </div>
+
+          <div class="pricing-hub-card">
+            <div class="pricing-hub-card-header">
+              <div class="pricing-hub-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              </div>
+              <span class="pricing-hub-card-tag">Audited Scope 3 ESG</span>
+            </div>
+            <h3 class="pricing-hub-card-title">Carbon Offsets</h3>
+            <p class="pricing-hub-card-desc">Verified zero-tailpipe courier routes with downloadable certified Scope 3 ESG environmental impact reports.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: SURCHARGE-FREE TRANSPARENT COST LEDGER (EVEN 4-COL GRID)
+         ====================================================================== -->
+    <section class="pricing-fees-section" id="transparent-fees">
+      <div class="pricing-fees-container">
+
+        <div class="section-head-center">
+          <div class="section-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>OUR PRICING PLEDGE</span>
+          </div>
+          <h2 class="section-title">Zero Hidden Fees. Guaranteed.</h2>
+          <p class="section-subtitle">
+            Traditional couriers inflate invoices with fuel surcharges and rush penalties. Here is what you never pay
+            with EcoCycle.
+          </p>
+        </div>
+
+        <div class="pricing-fees-grid">
+
+          <article class="pricing-fee-card">
+            <div>
+              <div class="pricing-fee-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                </svg>
+              </div>
+              <h3 class="pricing-fee-title">No Surge Pricing</h3>
+              <p class="pricing-fee-desc">
+                Rain, rush hour, or transit strikes never inflate your delivery fee. Rates stay completely fixed 365
+                days a year.
+              </p>
+            </div>
+            <div class="pricing-fee-meta">
+              <span class="pricing-fee-meta-key">Surge Fee</span>
+              <span class="pricing-fee-meta-val">$0.00 Fixed</span>
+            </div>
+          </article>
+
+          <article class="pricing-fee-card">
+            <div>
+              <div class="pricing-fee-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+              </div>
+              <h3 class="pricing-fee-title">Zero Congestion Fees</h3>
+              <p class="pricing-fee-desc">
+                Bicycles and e-cargo bikes bypass all municipal ultra-low emission zone fees and parking citation
+                chargebacks.
+              </p>
+            </div>
+            <div class="pricing-fee-meta">
+              <span class="pricing-fee-meta-key">Zone Penalties</span>
+              <span class="pricing-fee-meta-val">$0.00 Exempt</span>
+            </div>
+          </article>
+
+          <article class="pricing-fee-card">
+            <div>
+              <div class="pricing-fee-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3 class="pricing-fee-title">Complimentary Insurance</h3>
+              <p class="pricing-fee-desc">
+                Every shipment is protected by automatic $5,000 transit liability coverage with simplified
+                zero-deductible claims.
+              </p>
+            </div>
+            <div class="pricing-fee-meta">
+              <span class="pricing-fee-meta-key">Coverage</span>
+              <span class="pricing-fee-meta-val">$5,000 Included</span>
+            </div>
+          </article>
+
+          <article class="pricing-fee-card">
+            <div>
+              <div class="pricing-fee-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="pricing-fee-title">Free Developer API</h3>
+              <p class="pricing-fee-desc">
+                Integrate live quotes, automatic order dispatch, and webhook status pings into your storefront without
+                software licensing costs.
+              </p>
+            </div>
+            <div class="pricing-fee-meta">
+              <span class="pricing-fee-meta-key">API Setup</span>
+              <span class="pricing-fee-meta-val">Unlimited Free</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: FINAL PRICING ACTION BANNER (MANDATORY CTA SECTION)
+         ====================================================================== -->
+    <section class="pricing-cta-section" id="pricing-cta">
+      <img src="assets/images/pricing/p25.jpg" alt="Night skyline of city business district" class="pricing-cta-bg"
+        loading="lazy" width="1600" height="800">
+
+      <div class="pricing-cta-container">
+
+        <div class="section-eyebrow section-eyebrow-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+          </svg>
+          <span>ELEVATE YOUR BUSINESS LOGISTICS</span>
+        </div>
+
+        <h2 class="cta-title">Custom Volume Rates For High-Frequency Dispatches</h2>
+
+        <p class="cta-subtitle">
+          Whether you need 20 drops a week or 200 drops a day, our team designs custom zero-emission commercial rate
+          contracts tailored to your margins.
+        </p>
+
+        <div class="cta-button-row">
+          <a href="contact.html" class="btn btn-primary btn-cta-primary">
+            <span>Talk to Enterprise Sales</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"
+              aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="dashboard.html" class="btn btn-secondary btn-cta-outline">
+            <span>Open Free Client Portal</span>
+          </a>
+        </div>
+
+        <div class="cta-guarantees">
+          <span class="cta-guarantee-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"
+              aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>No Long-Term Lock-in</span>
+          </span>
+          <span class="cta-guarantee-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"
+              aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Custom Invoicing Windows</span>
+          </span>
+          <span class="cta-guarantee-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"
+              aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Full SLA Guarantees</span>
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       4. GLOBAL SITE FOOTER (UNIFORM CONTAINER, 4 COLUMNS & SOCIAL LINKS)
+       ======================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-container">
+
+      <div class="footer-grid">
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-identity">
+            <img src="assets/images/logo/logo.png" alt="EcoCycle" class="brand-logo-img">
+            <div class="brand-text-block">
+              <span class="brand-title">Eco<span>Cycle</span></span>
+              <span class="brand-subtitle">Express Courier</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            Metropolitan zero-emission courier network delivering same-day packages, food, medical supplies, and
+            enterprise cargo on pedal & e-cargo bikes.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="EcoCycle on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="EcoCycle on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="EcoCycle on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="EcoCycle on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+          <div class="footer-eco-badge">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span>100% Carbon Neutral Certified</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home 1 - Urban Express</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 - Cargo Logistics</a></li>
+            <li><a href="about.html" class="footer-link">About Fleet & Team</a></li>
+            <li><a href="pricing.html" class="footer-link">Delivery Rates</a></li>
+            <li><a href="dashboard.html" class="footer-link">Client Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="footer-heading">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Instant Same-Day Drop</a></li>
+            <li><a href="services.html" class="footer-link">E-Cargo Freight</a></li>
+            <li><a href="services.html" class="footer-link">Medical & Lab Courier</a></li>
+            <li><a href="services.html" class="footer-link">Legal Documents Express</a></li>
+            <li><a href="services.html" class="footer-link">Scheduled Routes</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Dispatch -->
+        <div>
+          <h3 class="footer-heading">Live Dispatch Hub</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Central Hub: 45 Green Lane, Metro District, City</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>Dispatch Line: +1 (800) 555-BIKE</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>dispatch@ecocycle-express.com</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoCycle Express Courier Services. Zero-Emission All Day.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="contact.html" class="footer-bottom-link">Privacy Policy</a></li>
+          <li><a href="contact.html" class="footer-bottom-link">Terms of Service</a></li>
+          <li><a href="contact.html" class="footer-bottom-link">Carbon Offset Certificate</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Button -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- External JavaScript (Zero inline scripts) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

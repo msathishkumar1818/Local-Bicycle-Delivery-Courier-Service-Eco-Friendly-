@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | EcoCycle Express - Zero-Emission Bicycle Courier Fleet</title>
+  <meta name="description"
+    content="Discover the mission, crew, and precision cargo bike engineering behind EcoCycle Express, the metropolitan leader in zero-emission bicycle delivery.">
+
+  <!-- Favicon featuring Official Client Logo -->
+  <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo/logo.png">
+
+  <!-- Tailwind CSS CDN for utility baseline -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External Stylesheets (Zero inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       1. BRANDED PRELOADER (WITH OFFICIAL LOGO)
+       ======================================================================== -->
+  <div id="preloader" role="status" aria-live="polite" aria-label="Loading EcoCycle Express About">
+    <div class="loader-logo-wrap">
+      <div class="loader-logo-ring" aria-hidden="true"></div>
+      <img src="assets/images/logo/logo.png" alt="EcoCycle Logo" class="loader-logo-img">
+    </div>
+    <div class="loader-bar-wrap" aria-hidden="true">
+      <div class="loader-bar"></div>
+    </div>
+    <span class="loader-text">Zero-Emission Dispatching...</span>
+  </div>
+
+  <!-- ========================================================================
+       2. FIXED COMPACT HEADER (SHARED BRAND SYSTEM)
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Brand Logo + Identity -->
+      <a href="index.html" class="brand-identity" aria-label="EcoCycle Express Home">
+        <img src="assets/images/logo/logo.png" alt="EcoCycle Express Emblem" class="brand-logo-img">
+        <div class="brand-text-block">
+          <span class="brand-title">Eco<span>Cycle</span></span>
+          <span class="brand-subtitle">Express Courier</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Primary Items -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <!-- 1. Home (Click-only Dropdown) -->
+        <div class="nav-dropdown-wrapper">
+          <button type="button" class="dropdown-trigger" id="homeDropdownBtn" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="dropdown-menu" id="homeDropdownMenu" role="menu" aria-labelledby="homeDropdownBtn">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1 - Urban Zero-Emission</span>
+              <span class="dropdown-tag">Express</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2 - Cargo & Logistics</span>
+              <span class="dropdown-tag">Enterprise</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. About (Current Page) -->
+        <a href="about.html" class="nav-link active" aria-current="page">About</a>
+
+        <!-- 3. Services -->
+        <a href="services.html" class="nav-link">Services</a>
+
+        <!-- 4. Pricing -->
+        <a href="pricing.html" class="nav-link">Pricing</a>
+
+        <!-- 5. Dashboard -->
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+
+        <!-- 6. Contact (Directly Visible) -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls: RTL + Dark Mode + Login + Book Pickup CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="control-btn control-btn-rtl rtl-toggle-btn" aria-label="Toggle layout direction">
+          RTL
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="control-btn theme-toggle-btn" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <!-- Login Portal Link -->
+        <a href="login.html" class="btn-login" aria-label="Business Client Login Portal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5"
+            aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Header Primary CTA Button -->
+        <a href="dashboard.html" class="btn-header-cta" aria-label="Book Delivery Pickup">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="w-3.5 h-3.5"
+            aria-hidden="true">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+          <span>Book Pickup</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" aria-label="Open mobile menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       3. MOBILE MENU DRAWER (CLEAN, ACCESSIBLE, INTEGRATED)
+       ======================================================================== -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop">
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+
+      <!-- Drawer Header with Brand + Close -->
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-identity">
+          <img src="assets/images/logo/logo.png" alt="EcoCycle" class="brand-logo-img">
+          <div class="brand-text-block">
+            <span class="brand-title">Eco<span>Cycle</span></span>
+            <span class="brand-subtitle">Express Courier</span>
+          </div>
+        </a>
+        <button type="button" class="mobile-close-btn" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" class="w-5 h-5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Controls Row: RTL & Dark Mode inside drawer -->
+      <div class="mobile-controls-row">
+        <span class="mobile-controls-label">Preferences</span>
+        <div class="mobile-controls-btns">
+          <button type="button" class="control-btn control-btn-rtl rtl-toggle-btn" aria-label="Toggle layout direction">
+            RTL
+          </button>
+          <button type="button" class="control-btn theme-toggle-btn" aria-label="Toggle dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation List -->
+      <nav class="mobile-nav-list" aria-label="Mobile Directory">
+
+        <!-- Accordion for Home 1 and Home 2 (Click Only) -->
+        <div class="mobile-accordion-wrap">
+          <button type="button" class="mobile-accordion-trigger" aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-chevron mobile-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="index.html" class="mobile-sub-link">
+              <span>Home 1 - Urban Zero-Emission</span>
+            </a>
+            <a href="home-2.html" class="mobile-sub-link">
+              <span>Home 2 - Cargo & Enterprise</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="mobile-nav-link active">About</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+
+      <!-- Mobile Drawer Footer CTAs -->
+      <div class="mobile-drawer-footer">
+        <a href="dashboard.html" class="mobile-btn-cta" aria-label="Book Instant Pickup">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="w-4 h-4"
+            aria-hidden="true">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+          <span>Book Instant Pickup</span>
+        </a>
+        <a href="login.html" class="mobile-btn-login" aria-label="Client Login Portal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="w-4 h-4"
+            aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span>Client Login Portal</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MAIN CONTENT: ABOUT US (EXACTLY 5 CONTENT SECTIONS)
+       ======================================================================== -->
+  <main id="mainContent">
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 1: MISSION & ORIGINS (HERO EDITORIAL + DUAL PHOTO FRAME)
+         ---------------------------------------------------------------------- -->
+    <section class="about-hero-section" id="mission-origins">
+      <div class="about-hero-container">
+
+        <!-- Centered Mission Narrative & Credo -->
+        <div class="about-hero-content">
+          <div class="section-eyebrow">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+              <path d="M2 12h20" />
+            </svg>
+            <span> Urban Clean Air Movement</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Born From City Gridlock, Driven by <span class="text-gradient">Pure Kinetic Motion</span>.
+          </h1>
+
+          <p class="hero-subtext">
+            We started with five bicycle couriers tired of watching idling delivery vans choke our streets with soot,
+            double-parking fines, and gridlock. Today, EcoCycle operates a citywide network of cargo e-bikes and
+            localized micro-hubs.
+          </p>
+
+          <div class="hero-trust-row">
+            <div class="hero-trust-item">
+              <span class="hero-trust-num">500K+</span>
+              <span class="hero-trust-label">Parcels Dispatched</span>
+            </div>
+            <div class="hero-trust-item">
+              <span class="hero-trust-num">0.0%</span>
+              <span class="hero-trust-label">Tailpipe Emissions</span>
+            </div>
+            <div class="hero-trust-item">
+              <span class="hero-trust-num">4 Hubs</span>
+              <span class="hero-trust-label">Downtown Stations</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 2: MOBILITY EVOLUTION (MILESTONE TIMELINE 2021 TO 2026)
+         ---------------------------------------------------------------------- -->
+    <section class="about-timeline-section" id="mobility-journey">
+      <div class="section-head-center">
+        <div class="section-eyebrow">
+          <span>Our Journey</span>
+        </div>
+        <h2 class="section-title">From A Single Garage to Citywide Infrastructure</h2>
+        <p class="section-desc">
+          Key milestones that shaped our zero-emission logistics network into the most reliable bicycle delivery service
+          in the metropolitan district.
+        </p>
+      </div>
+
+      <div class="about-timeline-container">
+        <div class="about-timeline-grid">
+
+          <div class="about-milestone-card">
+            <div>
+              <div class="about-milestone-year">2021</div>
+              <h3 class="about-milestone-title">Garage Genesis</h3>
+              <p class="about-milestone-desc">
+                Launched with 5 couriers and a handheld walkie-talkie dispatch system, serving local bakeries and law
+                practices within a 3-kilometer radius.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-milestone-card">
+            <div>
+              <div class="about-milestone-year">2023</div>
+              <h3 class="about-milestone-title">E-Cargo Expansion</h3>
+              <p class="about-milestone-desc">
+                Introduced our first custom-built 200kg heavy-duty electric cargo tricycles, enabling freight and bulk
+                retail logistics at cycling velocity.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-milestone-card">
+            <div>
+              <div class="about-milestone-year">2025</div>
+              <h3 class="about-milestone-title">Micro-Hub Network</h3>
+              <p class="about-milestone-desc">
+                Established 4 automated cross-docking stations across metro quadrants, cutting average delivery times
+                from 45 minutes to under 24 minutes.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-milestone-card">
+            <div>
+              <div class="about-milestone-year">2026</div>
+              <h3 class="about-milestone-title">Verified ESG Standard</h3>
+              <p class="about-milestone-desc">
+                Surpassed 140,000kg of displaced CO2, launching real-time API integrations and digital carbon accounting
+                ledgers for business clients.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 3: FLEET WORKSHOP & HARDWARE STANDARDS
+         ---------------------------------------------------------------------- -->
+    <section class="about-workshop-section" id="fleet-engineering">
+      <div class="about-workshop-container">
+
+        <!-- Left Column: Workshop Media Frame -->
+        <div>
+          <div class="about-workshop-media">
+            <img src="assets/images/about/p9.jpg" alt="Close-up of precision bicycle gears and components" width="800"
+              height="600" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Right Column: Precision Standards Cards -->
+        <div>
+          <div class="section-eyebrow">
+            <span>Engineering Excellence</span>
+          </div>
+          <h2 class="section-title">Maintained to Aviation-Grade Standards</h2>
+          <p class="section-desc impact-desc-spacing">
+            A late delivery due to mechanical failure is unacceptable. Every bicycle in our fleet undergoes daily safety
+            calibrations before riders hit the tarmac.
+          </p>
+
+          <div class="about-spec-cards-col">
+
+            <div class="about-spec-item">
+              <div class="about-spec-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="about-spec-title">06:00 AM Daily Pre-Flight Torque Check</h3>
+                <p class="about-spec-text">Brakes, drivetrains, hydraulic fluids, and tire pressures inspected every
+                  single morning by certified mechanics.</p>
+              </div>
+            </div>
+
+            <div class="about-spec-item">
+              <div class="about-spec-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="about-spec-title">Kevlar Puncture-Resistant Shielding</h3>
+                <p class="about-spec-text">Dual-layer reinforced casing virtually eliminates flats caused by urban
+                  street glass and construction debris.</p>
+              </div>
+            </div>
+
+            <div class="about-spec-item">
+              <div class="about-spec-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="about-spec-title">Weather-Sealed Thermal Vaults</h3>
+                <p class="about-spec-text">Lockable waterproof cargo boxes with calibrated IoT temperature monitoring
+                  for gourmet dining and medical shipments.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 4: THE DISPATCH CREW & LEADERSHIP SPOTLIGHT
+         ---------------------------------------------------------------------- -->
+    <section class="about-crew-section" id="crew-leadership">
+      <div class="section-head-center">
+        <div class="section-eyebrow">
+          <span>The Road Warriors</span>
+        </div>
+        <h2 class="section-title">Meet the Couriers & Fleet Architects</h2>
+        <p class="section-desc">
+          Professional riders and logistics experts who know every alley, elevation shortcut, and traffic light cycle in
+          the metropolitan area.
+        </p>
+      </div>
+
+      <div class="about-crew-grid">
+
+        <!-- Crew Member 1 -->
+        <div class="about-crew-card">
+          <div class="about-crew-img-wrap">
+            <img src="assets/images/about/p10.jpg" alt="Liam Vance" width="400" height="520" loading="lazy">
+            <span class="about-crew-badge">Road Captain</span>
+          </div>
+          <div class="about-crew-body">
+            <div>
+              <h3 class="about-crew-name">Liam "Spoke" Vance</h3>
+              <div class="about-crew-role">Head of Street Operations</div>
+              <p class="about-crew-bio">
+                12-year courier veteran with over 48,000 kilometers navigated through downtown traffic. Oversees rider
+                route intelligence and sprint dispatches.
+              </p>
+            </div>
+            <div class="about-crew-stats">
+              <span>Career Metric</span>
+              <span class="about-crew-stat-val">48,200 KM Logged</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crew Member 2 -->
+        <div class="about-crew-card">
+          <div class="about-crew-img-wrap">
+            <img src="assets/images/about/p11.jpg" alt="Maya Lin" width="400" height="520" loading="lazy">
+            <span class="about-crew-badge">Co-Founder</span>
+          </div>
+          <div class="about-crew-body">
+            <div>
+              <h3 class="about-crew-name">Maya Lin</h3>
+              <div class="about-crew-role">Founder & Chief Urban Planner</div>
+              <p class="about-crew-bio">
+                Former municipal transportation architect who designed our 4-station micro-hub model to bypass car
+                congestion choke-points permanently.
+              </p>
+            </div>
+            <div class="about-crew-stats">
+              <span>System Design</span>
+              <span class="about-crew-stat-val">4 Micro-Hubs Built</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crew Member 3 -->
+        <div class="about-crew-card">
+          <div class="about-crew-img-wrap">
+            <img src="assets/images/about/p12.jpg" alt="Tariq Thorne" width="400" height="520" loading="lazy">
+            <span class="about-crew-badge">Master Tech</span>
+          </div>
+          <div class="about-crew-body">
+            <div>
+              <h3 class="about-crew-name">Tariq Thorne</h3>
+              <div class="about-crew-role">Chief Mechanical & Hardware Engineer</div>
+              <p class="about-crew-bio">
+                Certified master bicycle mechanic specializing in high-torque mid-drive e-cargo systems and
+                sensor-calibrated cold-chain preservation containers.
+              </p>
+            </div>
+            <div class="about-crew-stats">
+              <span>Fleet Reliability</span>
+              <span class="about-crew-stat-val">99.9% Uptime</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 5: FINAL CLEAN AIR ACTION BANNER (MANDATORY LAST SECTION)
+         ---------------------------------------------------------------------- -->
+    <section class="about-cta-section" id="about-clean-cta">
+      <img src="assets/images/backgrounds/p13.jpg" alt="Urban cyclist riding into dusk" class="about-cta-bg"
+        width="1200" height="600" loading="lazy">
+      <div class="about-cta-container">
+
+        <div class="section-eyebrow section-eyebrow-cta">
+          <span>Join the Clean Air Revolution</span>
+        </div>
+
+        <h2 class="cta-title">
+          Ready to Make Your Business Deliveries 100% Carbon Neutral?
+        </h2>
+
+        <p class="cta-subtitle">
+          Experience the kinetic speed of bicycle courier dispatch. Partner with EcoCycle today and eliminate delivery
+          van delays from your downtown operations.
+        </p>
+
+        <div class="cta-button-row">
+          <a href="login.html" class="btn-primary btn-cta-primary">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" />
+            </svg>
+            <span>Open Business Account</span>
+          </a>
+          <a href="contact.html" class="btn-outline btn-cta-outline">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>Talk With Dispatch Team</span>
+          </a>
+        </div>
+
+        <div class="cta-guarantees">
+          <div class="cta-guarantee-item">
+            <svg class="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span>Instant 15-Minute Account Setup</span>
+          </div>
+          <div class="cta-guarantee-item">
+            <svg class="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span>Zero Diesel Surcharges</span>
+          </div>
+          <div class="cta-guarantee-item">
+            <svg class="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span>Direct Courier-to-Client Tracking</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       4. SCROLL TO TOP BUTTON
+       ======================================================================== -->
+  <button type="button" id="scrollTopBtn" aria-label="Scroll to top of page">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <!-- ========================================================================
+       5. SHARED FOOTER SYSTEM (WITH OFFICIAL LOGO)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-grid">
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-identity">
+            <img src="assets/images/logo/logo.png" alt="EcoCycle" class="brand-logo-img">
+            <div class="brand-text-block">
+              <span class="brand-title">Eco<span>Cycle</span></span>
+              <span class="brand-subtitle">Express Courier</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            Metropolitan zero-emission courier network delivering same-day packages, food, medical supplies, and
+            enterprise cargo on pedal & e-cargo bikes.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="EcoCycle on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="EcoCycle on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="EcoCycle on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="EcoCycle on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+          <div class="footer-eco-badge">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span>100% Carbon Neutral Certified</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home 1 - Urban Express</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 - Cargo Logistics</a></li>
+            <li><a href="about.html" class="footer-link">About Fleet & Team</a></li>
+            <li><a href="pricing.html" class="footer-link">Delivery Rates</a></li>
+            <li><a href="dashboard.html" class="footer-link">Client Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="footer-heading">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Instant Same-Day Drop</a></li>
+            <li><a href="services.html" class="footer-link">E-Cargo Freight</a></li>
+            <li><a href="services.html" class="footer-link">Medical & Lab Courier</a></li>
+            <li><a href="services.html" class="footer-link">Legal Documents Express</a></li>
+            <li><a href="services.html" class="footer-link">Scheduled Routes</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Dispatch -->
+        <div>
+          <h3 class="footer-heading">Live Dispatch Hub</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Central Hub: 45 Green Lane, Metro District, City</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>Dispatch Line: +1 (800) 555-BIKE</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>dispatch@ecocycle-express.com</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoCycle Express Courier Services. Zero-Emission All Day.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="contact.html" class="footer-bottom-link">Privacy Policy</a></li>
+          <li><a href="contact.html" class="footer-bottom-link">Terms of Service</a></li>
+          <li><a href="contact.html" class="footer-bottom-link">Carbon Offset Certificate</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- External Script (Zero inline JavaScript) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
