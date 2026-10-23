@@ -55,7 +55,7 @@
       <nav class="desktop-nav" aria-label="Main Navigation">
         <!-- 1. Home (Click-only Dropdown) -->
         <div class="nav-dropdown-wrapper">
-          <button type="button" class="dropdown-trigger" id="homeDropdownBtn" aria-haspopup="true"
+          <button type="button" class="dropdown-trigger active" id="homeDropdownBtn" aria-haspopup="true"
             aria-expanded="false">
             <span>Home</span>
             <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -63,7 +63,7 @@
             </svg>
           </button>
           <div class="dropdown-menu" id="homeDropdownMenu" role="menu" aria-labelledby="homeDropdownBtn">
-            <a href="index.html" class="dropdown-item" role="menuitem">
+            <a href="index.html" class="dropdown-item active" role="menuitem" aria-current="page">
               <span>Home 1 - Urban Zero-Emission</span>
               <span class="dropdown-tag">Express</span>
             </a>
@@ -194,14 +194,14 @@
 
         <!-- Accordion for Home 1 and Home 2 (Click Only) -->
         <div class="mobile-accordion-wrap">
-          <button type="button" class="mobile-accordion-trigger" aria-expanded="false">
+          <button type="button" class="mobile-accordion-trigger active" aria-expanded="false">
             <span>Home</span>
             <svg class="dropdown-chevron mobile-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
           <div class="mobile-accordion-content">
-            <a href="index.html" class="mobile-sub-link">
+            <a href="index.html" class="mobile-sub-link active" aria-current="page">
               <span>Home 1 - Urban Zero-Emission</span>
             </a>
             <a href="home-2.html" class="mobile-sub-link">

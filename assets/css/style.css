@@ -363,9 +363,11 @@ img {
 }
 
 .dropdown-trigger:hover,
+.dropdown-trigger.active,
 .dropdown-trigger[aria-expanded="true"] {
   color: var(--color-primary);
   background-color: var(--color-primary-subtle);
+  font-weight: 700;
 }
 
 .dropdown-chevron {
@@ -729,6 +731,7 @@ img {
 }
 
 .mobile-accordion-trigger:hover,
+.mobile-accordion-trigger.active,
 .mobile-accordion-trigger[aria-expanded="true"] {
   background-color: var(--color-primary-subtle);
   color: var(--color-primary);
